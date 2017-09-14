@@ -101,7 +101,6 @@ var stats : [Stat] = []
         } else if currentMinute == GameTime {
             self.performSegue(withIdentifier: "breakSegue", sender: self)
         }
-        print(Period)
         updateLabels()
     }
     func updateLabels(){
@@ -201,6 +200,12 @@ var stats : [Stat] = []
         whoVC.action = tappedAction
         whoVC.pointsOfAction = pointsOfAction
         whoVC.minute = currentMinute
+        } else if segue.identifier == "breakSeue" {
+        let breakVC = segue.destination as! BreakViewController
+        breakVC.period = Period
+        breakVC.homeTeamScore = currentScoreTeamOne
+        breakVC.guestTeamScore = currentScoreTeamTwo
+            
         }
     }
 /*    func fetchLastStat(){

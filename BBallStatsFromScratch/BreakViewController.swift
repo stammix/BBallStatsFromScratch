@@ -8,11 +8,12 @@
 
 import UIKit
 
-class BreakViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class BreakViewController: UIViewController //, UITableViewDelegate, UITableViewDataSource 
+{
     
     var homeTeamScore = 0
     var guestTeamScore = 0
-    var Period = 1
+    var period = 1
     var stats : [Stat] = []
     
     @IBOutlet weak var statSummaryTableView: UITableView!
@@ -40,39 +41,39 @@ class BreakViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        statSummaryTableView.dataSource = self
-        statSummaryTableView.delegate = self
+//        statSummaryTableView.dataSource = self
+    //statSummaryTableView.delegate = self
         // Do any additional setup after loading the view.
     }
 
- /*   override func viewWillAppear(_ animated: Bool) {
-        if Period == 1 {
+    override func viewWillAppear(_ animated: Bool) {
+        if period == 1 {
             print("*** Break after Period 1")
             summaryLabel.text = "Summary Quarter 1"
-        } else if Period == 2 {
+        } else if period == 2 {
             print("*** Break after Period 2")
             summaryLabel.text = "Summary Quarter 2"
         } else if Period == 3 {
             print("*** Break after Period 3")
             summaryLabel.text = "Summary Quarter 3"
-        } else if Period == 4 && homeTeamScore == guestTeamScore{
+        } else if period == 4 && homeTeamScore == guestTeamScore{
             print("*** Break after Period 4")
             summaryLabel.text = "Summary Quarter 4"
             QuarterBreakTitleLabel.text = "Game Summary"
             nextQuarterButtonLabel.setTitle("Overtime Baby", for: .normal)
-        } else if Period > 4 && homeTeamScore == guestTeamScore{
+        } else if period > 4 && homeTeamScore == guestTeamScore{
             print("*** Break after OT \(Period - 4)")
             summaryLabel.text = "Summary OT \(Period - 4)"
             QuarterBreakTitleLabel.text = "OT Summary"
             nextQuarterButtonLabel.setTitle("Overtime Baby", for: .normal)
-        } else if Period >= 4 {
+        } else if period >= 4 {
             print("*** Break after Period 4")
             summaryLabel.text = "Summary Quarter 4"
             QuarterBreakTitleLabel.text = "Game Summary"
             nextQuarterButtonLabel.setTitle("Save GameStats and upload", for: .normal)
         }
-    } */
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    }
+ /*   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return stats.count
        
     }
@@ -81,5 +82,5 @@ class BreakViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let stat = stats[indexPath.row]
         cell.textLabel?.text = "\(stat.player), \(stat.action), \(stat.pointsOfAction)"
         return cell
-    }
+    } */
 }

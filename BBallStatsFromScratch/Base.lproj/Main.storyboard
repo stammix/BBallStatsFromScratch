@@ -506,7 +506,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="341" y="374"/>
+            <point key="canvasLocation" x="367" y="372"/>
         </scene>
         <!--Break View Controller-->
         <scene sceneID="lcE-vH-4kJ">
@@ -525,9 +525,6 @@
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KV3-Fg-UCc">
                                 <state key="normal" title="Start next Quarter"/>
-                                <connections>
-                                    <action selector="nextQuarterButton:" destination="dPT-E9-Rxe" eventType="touchUpInside" id="bgg-iz-7qu"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quarter Break" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sft-10-jEK">
                                 <constraints>
@@ -548,6 +545,9 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a44-ks-iV2">
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="nextQuarterButton:" destination="dPT-E9-Rxe" eventType="touchUpInside" id="snH-ps-k6d"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -572,7 +572,6 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="QuarterBreakTitleLabel" destination="Sft-10-jEK" id="uhF-px-amo"/>
-                        <outlet property="nextPeriodButtonLabel" destination="KV3-Fg-UCc" id="f0m-81-qZQ"/>
                         <outlet property="nextQuarterButtonLabel" destination="a44-ks-iV2" id="Y2P-Yj-qzr"/>
                         <outlet property="statSummaryTableView" destination="RDv-dH-LYy" id="gXz-ad-dr1"/>
                         <outlet property="summaryLabel" destination="fEL-ib-62H" id="XbJ-v6-NRE"/>
