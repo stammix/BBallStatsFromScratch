@@ -10,7 +10,7 @@
         <!--Settings View Controller-->
         <scene sceneID="c60-NP-Efa">
             <objects>
-                <viewController id="bVl-uw-c16" customClass="SettingsViewController" sceneMemberID="viewController">
+                <viewController id="bVl-uw-c16" customClass="SettingsViewController" customModule="BBallStatsFromScratch" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ehg-mw-VeC"/>
                         <viewControllerLayoutGuide type="bottom" id="0Nj-BN-MJm"/>
@@ -47,6 +47,9 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jzY-6a-7Pj">
                                 <color key="onTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="thumbTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="teamSwitch:" destination="bVl-uw-c16" eventType="valueChanged" id="Guj-hc-niy"/>
+                                </connections>
                             </switch>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YlJ-dZ-zBH">
                                 <subviews>
@@ -55,19 +58,19 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OpH-YN-lBe">
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <connections>
-                                                    <action selector="HomeTeamBlack:" destination="bVl-uw-c16" eventType="touchUpInside" id="Xbw-44-75v"/>
+                                                    <action selector="homeTeamBlackColorTapped:" destination="bVl-uw-c16" eventType="touchUpInside" id="BqQ-le-MB0"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i7N-Cp-jui">
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <connections>
-                                                    <action selector="HomeTeamBlue:" destination="bVl-uw-c16" eventType="touchUpInside" id="FpX-Zy-W7d"/>
+                                                    <action selector="homeTeamBlueColorTapped:" destination="bVl-uw-c16" eventType="touchUpInside" id="mji-WD-rAP"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fSb-fx-hvD">
                                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <connections>
-                                                    <action selector="HomeTeamRed:" destination="bVl-uw-c16" eventType="touchUpInside" id="fr9-L1-sh5"/>
+                                                    <action selector="homeTeamRedColorTapped:" destination="bVl-uw-c16" eventType="touchUpInside" id="WUb-IV-gSY"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -76,21 +79,12 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ksd-FI-mSn">
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <connections>
-                                                    <action selector="HomeTeamWhite:" destination="bVl-uw-c16" eventType="touchUpInside" id="wso-pn-jf6"/>
-                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="657-Al-sa0">
                                                 <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <connections>
-                                                    <action selector="HomeTeamYellow:" destination="bVl-uw-c16" eventType="touchUpInside" id="giP-pz-0ZQ"/>
-                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v7h-Bf-rpl">
                                                 <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <connections>
-                                                    <action selector="HomeTeamGreen:" destination="bVl-uw-c16" eventType="touchUpInside" id="VII-6y-Ck6"/>
-                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -99,7 +93,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N45-sG-RAo">
                                 <state key="normal" title="TipOff"/>
                                 <connections>
-                                    <action selector="tippOffButton:" destination="bVl-uw-c16" eventType="touchUpInside" id="7Qk-Pn-vvb"/>
+                                    <action selector="tipOffTapped:" destination="bVl-uw-c16" eventType="touchUpInside" id="jDh-Ga-VJj"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Yl5-cZ-Yec">
@@ -109,19 +103,19 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OLt-i4-xYL">
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <connections>
-                                                    <action selector="OpponentTeamBlack:" destination="bVl-uw-c16" eventType="touchUpInside" id="V1d-36-ADi"/>
+                                                    <action selector="guestTeamBlackColorTapped:" destination="bVl-uw-c16" eventType="touchUpInside" id="bAo-er-Nx5"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qgD-TO-QAh">
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <connections>
-                                                    <action selector="OpponentTeamBlue:" destination="bVl-uw-c16" eventType="touchUpInside" id="vuq-Oj-BZJ"/>
+                                                    <action selector="guestTeamBlueColorTapped:" destination="bVl-uw-c16" eventType="touchUpInside" id="10D-0a-V0b"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m80-cx-aOU">
                                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <connections>
-                                                    <action selector="OpponentTeamRed:" destination="bVl-uw-c16" eventType="touchUpInside" id="43L-CX-E4Z"/>
+                                                    <action selector="guestTeamRedColorTapped:" destination="bVl-uw-c16" eventType="touchUpInside" id="vDn-5R-egi"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -130,21 +124,12 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uwx-vg-btH">
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <connections>
-                                                    <action selector="OpponentTeamWhite:" destination="bVl-uw-c16" eventType="touchUpInside" id="VlG-N2-aOQ"/>
-                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CZs-9d-43x">
                                                 <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <connections>
-                                                    <action selector="OpponentTeamYellow:" destination="bVl-uw-c16" eventType="touchUpInside" id="GHd-6o-59W"/>
-                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DFu-sz-QUP">
                                                 <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <connections>
-                                                    <action selector="OpponentTeamGreen:" destination="bVl-uw-c16" eventType="touchUpInside" id="Wor-WQ-yZS"/>
-                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -153,7 +138,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d88-Ro-1Y3">
                                 <state key="normal" title="Reset Game"/>
                                 <connections>
-                                    <action selector="resetGameButton:" destination="bVl-uw-c16" eventType="touchUpInside" id="i1W-Lk-0BM"/>
+                                    <action selector="resetGameTapped:" destination="bVl-uw-c16" eventType="touchUpInside" id="6g9-ds-Qms"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -182,13 +167,12 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="SwitchState" destination="jzY-6a-7Pj" id="UNM-2v-nwb"/>
                         <segue destination="GOF-hA-dd3" kind="show" identifier="SettingsToGameSegue" id="5cg-4I-PrN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cb9-Zv-QZp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-330.58470764617692" y="-495.19999999999999"/>
+            <point key="canvasLocation" x="-412" y="-524"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="J23-87-6XA">
@@ -562,14 +546,19 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a44-ks-iV2">
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Sft-10-jEK" firstAttribute="centerY" secondItem="KV3-Fg-UCc" secondAttribute="centerY" constant="43" id="3sb-GZ-v3x"/>
                             <constraint firstItem="fEL-ib-62H" firstAttribute="leading" secondItem="gas-01-YXy" secondAttribute="leadingMargin" id="7HS-cv-6oA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="a44-ks-iV2" secondAttribute="trailing" id="Itw-ck-FwM"/>
                             <constraint firstItem="RDv-dH-LYy" firstAttribute="top" secondItem="KV3-Fg-UCc" secondAttribute="bottom" constant="15" id="O0P-Mn-RSg"/>
                             <constraint firstItem="Sft-10-jEK" firstAttribute="centerX" secondItem="gas-01-YXy" secondAttribute="centerX" id="SDa-pS-5cL"/>
                             <constraint firstItem="RDv-dH-LYy" firstAttribute="leading" secondItem="gas-01-YXy" secondAttribute="leadingMargin" constant="97" id="WCk-JT-ary"/>
+                            <constraint firstItem="a44-ks-iV2" firstAttribute="top" secondItem="KV3-Fg-UCc" secondAttribute="bottom" constant="36" id="WKY-GJ-GVS"/>
                             <constraint firstItem="fEL-ib-62H" firstAttribute="top" secondItem="jdd-ER-ipd" secondAttribute="bottom" constant="79" id="evq-7I-lt3"/>
                             <constraint firstItem="KV3-Fg-UCc" firstAttribute="top" secondItem="jdd-ER-ipd" secondAttribute="bottom" constant="13" id="fSJ-nU-QCq"/>
                             <constraint firstAttribute="bottom" secondItem="RDv-dH-LYy" secondAttribute="bottom" id="mpA-4a-X3V"/>
@@ -584,6 +573,8 @@
                     <connections>
                         <outlet property="QuarterBreakTitleLabel" destination="Sft-10-jEK" id="uhF-px-amo"/>
                         <outlet property="nextPeriodButtonLabel" destination="KV3-Fg-UCc" id="f0m-81-qZQ"/>
+                        <outlet property="nextQuarterButtonLabel" destination="a44-ks-iV2" id="Y2P-Yj-qzr"/>
+                        <outlet property="statSummaryTableView" destination="RDv-dH-LYy" id="gXz-ad-dr1"/>
                         <outlet property="summaryLabel" destination="fEL-ib-62H" id="XbJ-v6-NRE"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="breakToGameSegue" id="gwz-x2-LZT"/>
                     </connections>
@@ -668,7 +659,7 @@
                                                         </constraints>
                                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title="T1P5" backgroundImage="BballStatsJerseyWhite.png"/>
-                                                        <state key="highlighted" backgroundImage="BballStats Trikot-weiß2.png"/>
+                                                        <state key="highlighted" backgroundImage="BballStatsJerseyWhite.png"/>
                                                         <connections>
                                                             <action selector="T1P5Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="Svl-P7-Y44"/>
                                                         </connections>
@@ -785,23 +776,15 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YRh-fc-nhN">
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="save:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="Pxi-nG-fuN"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="3qA-kq-Us4" firstAttribute="top" secondItem="7Op-Xv-ih5" secondAttribute="bottom" constant="5" id="2vK-Bq-Ixt"/>
                             <constraint firstItem="WsF-eF-qyt" firstAttribute="top" secondItem="Nxe-dz-ABC" secondAttribute="bottom" constant="5" id="ANS-gZ-wfh"/>
                             <constraint firstItem="Nxe-dz-ABC" firstAttribute="centerX" secondItem="JSO-Lb-udJ" secondAttribute="centerX" id="AlC-8w-ri0"/>
-                            <constraint firstItem="YRh-fc-nhN" firstAttribute="leading" secondItem="JSO-Lb-udJ" secondAttribute="leadingMargin" id="Eef-nq-Jo4"/>
                             <constraint firstItem="Nxe-dz-ABC" firstAttribute="top" secondItem="3qA-kq-Us4" secondAttribute="bottom" constant="10" id="MVL-Eg-ZXv"/>
                             <constraint firstItem="3qA-kq-Us4" firstAttribute="centerX" secondItem="JSO-Lb-udJ" secondAttribute="centerX" id="Uck-Vo-LQR"/>
                             <constraint firstItem="Nxe-dz-ABC" firstAttribute="centerX" secondItem="JSO-Lb-udJ" secondAttribute="centerX" id="tUQ-gt-mul"/>
-                            <constraint firstItem="YRh-fc-nhN" firstAttribute="baseline" secondItem="3qA-kq-Us4" secondAttribute="baseline" id="yna-Zy-djk"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Who made it?" id="6Jd-U2-4AY"/>
@@ -986,7 +969,6 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                 <state key="normal" title="T1P2" backgroundImage="BballStatsJerseyWhite.png"/>
                                                                 <connections>
-                                                                    <action selector="T1P2Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="HsA-UA-bAS"/>
                                                                     <action selector="T1P2Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="xsV-pB-hGd"/>
                                                                 </connections>
                                                             </button>
@@ -1002,7 +984,6 @@
                                                                 </constraints>
                                                                 <state key="normal" title="T1P3" backgroundImage="BballStatsJerseyWhite.png"/>
                                                                 <connections>
-                                                                    <action selector="T1P3Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="nX4-H6-G3O"/>
                                                                     <action selector="T1P3Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="qho-jo-f0d"/>
                                                                 </connections>
                                                             </button>
@@ -1014,7 +995,6 @@
                                                                 </constraints>
                                                                 <state key="normal" title="T1P4" backgroundImage="BballStatsJerseyWhite.png"/>
                                                                 <connections>
-                                                                    <action selector="T1P4Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="ANb-N5-Y0T"/>
                                                                     <action selector="T1P4Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="BpD-i8-YXa"/>
                                                                 </connections>
                                                             </button>
@@ -1026,7 +1006,6 @@
                                                                 </constraints>
                                                                 <state key="normal" title="T1P5" backgroundImage="BballStatsJerseyWhite.png"/>
                                                                 <connections>
-                                                                    <action selector="T1P5Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="6zp-mO-ZuF"/>
                                                                     <action selector="T1P5Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="IwM-TR-79X"/>
                                                                 </connections>
                                                             </button>
@@ -1047,7 +1026,6 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                                 <state key="normal" title="T1P6" backgroundImage="BballStatsJerseyWhite.png"/>
                                                                 <connections>
-                                                                    <action selector="T1P6Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="dgH-ao-us2"/>
                                                                     <action selector="T1P6Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="kRF-kp-s6m"/>
                                                                 </connections>
                                                             </button>
@@ -1060,7 +1038,6 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                                 <state key="normal" title="T1P7" backgroundImage="BballStatsJerseyWhite.png"/>
                                                                 <connections>
-                                                                    <action selector="T1P7Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="aXd-Zr-zsF"/>
                                                                     <action selector="T1P7Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="qFP-Hq-nyL"/>
                                                                 </connections>
                                                             </button>
@@ -1073,7 +1050,6 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                                 <state key="normal" title="T1P8" backgroundImage="BballStatsJerseyWhite.png"/>
                                                                 <connections>
-                                                                    <action selector="T1P8Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="sc8-3O-jX1"/>
                                                                     <action selector="T1P8Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="wKp-6R-43J"/>
                                                                 </connections>
                                                             </button>
@@ -1091,7 +1067,6 @@
                                                                 <state key="normal" title="T1P9" backgroundImage="BballStatsJerseyWhite.png"/>
                                                                 <connections>
                                                                     <action selector="T1P9Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="JTe-na-8pz"/>
-                                                                    <action selector="T1P9Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="Rpx-C0-JEY"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vQM-1e-cH7">
@@ -1103,7 +1078,6 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                                 <state key="normal" title="T1P10" backgroundImage="BballStatsJerseyWhite.png"/>
                                                                 <connections>
-                                                                    <action selector="T1P10Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="18W-EZ-xH8"/>
                                                                     <action selector="T1P10Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="qqZ-mV-HuQ"/>
                                                                 </connections>
                                                             </button>
@@ -1116,7 +1090,6 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                                 <state key="normal" title="T1P11" backgroundImage="BballStatsJerseyWhite.png"/>
                                                                 <connections>
-                                                                    <action selector="T1P11Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="0C5-tJ-4M3"/>
                                                                     <action selector="T1P11Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="5rz-4A-irx"/>
                                                                 </connections>
                                                             </button>
@@ -1130,7 +1103,6 @@
                                                                 <state key="normal" title="T1P12" backgroundImage="BballStatsJerseyWhite.png"/>
                                                                 <connections>
                                                                     <action selector="T1P12Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="OQQ-lf-dTp"/>
-                                                                    <action selector="T1P12Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="r5O-i7-QNM"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
@@ -1169,7 +1141,6 @@
                                                                 </constraints>
                                                                 <state key="normal" title="T2P2" backgroundImage="BballStatsJerseyBlack.png"/>
                                                                 <connections>
-                                                                    <action selector="T1P2Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="Osh-u4-WyO"/>
                                                                     <action selector="T2P2Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="7V8-6c-lk2"/>
                                                                 </connections>
                                                             </button>
@@ -1185,7 +1156,6 @@
                                                                 </constraints>
                                                                 <state key="normal" title="T2P3" backgroundImage="BballStatsJerseyBlack.png"/>
                                                                 <connections>
-                                                                    <action selector="T1P3Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="yAX-KQ-y1m"/>
                                                                     <action selector="T2P3Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="Wrc-sN-A4b"/>
                                                                 </connections>
                                                             </button>
@@ -1197,7 +1167,6 @@
                                                                 </constraints>
                                                                 <state key="normal" title="T2P4" backgroundImage="BballStatsJerseyBlack.png"/>
                                                                 <connections>
-                                                                    <action selector="T1P4Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="HZ2-2x-omC"/>
                                                                     <action selector="T2P4Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="eUa-VS-sF1"/>
                                                                 </connections>
                                                             </button>
@@ -1209,7 +1178,6 @@
                                                                 </constraints>
                                                                 <state key="normal" title="T2P5" backgroundImage="BballStatsJerseyBlack.png"/>
                                                                 <connections>
-                                                                    <action selector="T1P5Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="bUI-cr-eq7"/>
                                                                     <action selector="T2P5Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="bd8-bs-ohP"/>
                                                                 </connections>
                                                             </button>
@@ -1230,7 +1198,6 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                                 <state key="normal" title="T2P6" backgroundImage="BballStatsJerseyBlack.png"/>
                                                                 <connections>
-                                                                    <action selector="T1P6Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="eae-Ni-vKl"/>
                                                                     <action selector="T2P6Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="2pl-q1-D0B"/>
                                                                 </connections>
                                                             </button>
@@ -1243,7 +1210,6 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                                 <state key="normal" title="T2P7" backgroundImage="BballStatsJerseyBlack.png"/>
                                                                 <connections>
-                                                                    <action selector="T1P7Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="H2c-ec-oAG"/>
                                                                     <action selector="T2P7Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="PXa-ee-t0L"/>
                                                                 </connections>
                                                             </button>
@@ -1256,7 +1222,6 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                                 <state key="normal" title="T2P8" backgroundImage="BballStatsJerseyBlack.png"/>
                                                                 <connections>
-                                                                    <action selector="T1P8Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="Sqn-eH-pRo"/>
                                                                     <action selector="T2P8Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="fFa-rr-up6"/>
                                                                 </connections>
                                                             </button>
@@ -1274,7 +1239,6 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                                 <state key="normal" title="T2P9" backgroundImage="BballStatsJerseyBlack.png"/>
                                                                 <connections>
-                                                                    <action selector="T1P9Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="sNa-bZ-wL9"/>
                                                                     <action selector="T2P9Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="Od8-Nq-B6z"/>
                                                                 </connections>
                                                             </button>
@@ -1287,7 +1251,6 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                                 <state key="normal" title="T2P10" backgroundImage="BballStatsJerseyBlack.png"/>
                                                                 <connections>
-                                                                    <action selector="T1P10Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="jr7-30-xhR"/>
                                                                     <action selector="T2P10Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="QCh-m0-l8S"/>
                                                                 </connections>
                                                             </button>
@@ -1300,7 +1263,6 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                                 <state key="normal" title="T2P11" backgroundImage="BballStatsJerseyBlack.png"/>
                                                                 <connections>
-                                                                    <action selector="T1P11Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="KQD-5J-AdA"/>
                                                                     <action selector="T2P11Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="aDB-79-OEI"/>
                                                                 </connections>
                                                             </button>
@@ -1313,7 +1275,6 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                                 <state key="normal" title="T2P12" backgroundImage="BballStatsJerseyBlack.png"/>
                                                                 <connections>
-                                                                    <action selector="T1P12Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="BdR-gJ-Jpj"/>
                                                                     <action selector="T2P12Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="I7e-zZ-o9F"/>
                                                                 </connections>
                                                             </button>
@@ -1370,7 +1331,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="BballStats Trikot-weiß2.png" width="419" height="666"/>
         <image name="BballStatsJerseyBlack.png" width="420" height="660"/>
         <image name="BballStatsJerseyWhite.png" width="419" height="666"/>
     </resources>

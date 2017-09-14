@@ -9,6 +9,9 @@
 import UIKit
 
 class SubstitutionViewController: UIViewController {
+    
+    var subPlayer = 1
+    var newPlayer = 6
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -8,23 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		860AFC4C1F5C2204009B00D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860AFC4B1F5C2204009B00D5 /* AppDelegate.swift */; };
-		860AFC4E1F5C2204009B00D5 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860AFC4D1F5C2204009B00D5 /* SettingsViewController.swift */; };
 		860AFC511F5C2204009B00D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 860AFC4F1F5C2204009B00D5 /* Main.storyboard */; };
 		860AFC541F5C2204009B00D5 /* BBallStatsFromScratch.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 860AFC521F5C2204009B00D5 /* BBallStatsFromScratch.xcdatamodeld */; };
 		860AFC561F5C2204009B00D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 860AFC551F5C2204009B00D5 /* Assets.xcassets */; };
 		860AFC591F5C2204009B00D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 860AFC571F5C2204009B00D5 /* LaunchScreen.storyboard */; };
 		860AFC621F5C23DE009B00D5 /* BballStatsJerseyBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = 860AFC601F5C23DE009B00D5 /* BballStatsJerseyBlack.png */; };
 		860AFC631F5C23DE009B00D5 /* BballStatsJerseyWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 860AFC611F5C23DE009B00D5 /* BballStatsJerseyWhite.png */; };
-		860AFC651F5C24DE009B00D5 /* WhatHappendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860AFC641F5C24DE009B00D5 /* WhatHappendViewController.swift */; };
 		860AFC671F5C24F5009B00D5 /* WhoMadeItViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860AFC661F5C24F5009B00D5 /* WhoMadeItViewController.swift */; };
 		860AFC691F5C250C009B00D5 /* SubstitutionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860AFC681F5C250C009B00D5 /* SubstitutionViewController.swift */; };
 		860AFC6B1F5C251C009B00D5 /* BreakViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860AFC6A1F5C251C009B00D5 /* BreakViewController.swift */; };
+		86D26D791F6A90F40072FAC6 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D26D781F6A90F40072FAC6 /* SettingsViewController.swift */; };
+		86D26D7B1F6A91DF0072FAC6 /* WhatHappendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D26D7A1F6A91DF0072FAC6 /* WhatHappendViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		860AFC481F5C2204009B00D5 /* BBallStatsFromScratch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BBallStatsFromScratch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		860AFC4B1F5C2204009B00D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		860AFC4D1F5C2204009B00D5 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		860AFC501F5C2204009B00D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		860AFC531F5C2204009B00D5 /* BBallStatsFromScratch.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BBallStatsFromScratch.xcdatamodel; sourceTree = "<group>"; };
 		860AFC551F5C2204009B00D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -32,10 +31,11 @@
 		860AFC5A1F5C2204009B00D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		860AFC601F5C23DE009B00D5 /* BballStatsJerseyBlack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BballStatsJerseyBlack.png; sourceTree = "<group>"; };
 		860AFC611F5C23DE009B00D5 /* BballStatsJerseyWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BballStatsJerseyWhite.png; sourceTree = "<group>"; };
-		860AFC641F5C24DE009B00D5 /* WhatHappendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhatHappendViewController.swift; sourceTree = "<group>"; };
 		860AFC661F5C24F5009B00D5 /* WhoMadeItViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhoMadeItViewController.swift; sourceTree = "<group>"; };
 		860AFC681F5C250C009B00D5 /* SubstitutionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubstitutionViewController.swift; sourceTree = "<group>"; };
 		860AFC6A1F5C251C009B00D5 /* BreakViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreakViewController.swift; sourceTree = "<group>"; };
+		86D26D781F6A90F40072FAC6 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		86D26D7A1F6A91DF0072FAC6 /* WhatHappendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhatHappendViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,8 +69,8 @@
 			isa = PBXGroup;
 			children = (
 				860AFC4B1F5C2204009B00D5 /* AppDelegate.swift */,
-				860AFC4D1F5C2204009B00D5 /* SettingsViewController.swift */,
-				860AFC641F5C24DE009B00D5 /* WhatHappendViewController.swift */,
+				86D26D781F6A90F40072FAC6 /* SettingsViewController.swift */,
+				86D26D7A1F6A91DF0072FAC6 /* WhatHappendViewController.swift */,
 				860AFC661F5C24F5009B00D5 /* WhoMadeItViewController.swift */,
 				860AFC681F5C250C009B00D5 /* SubstitutionViewController.swift */,
 				860AFC6A1F5C251C009B00D5 /* BreakViewController.swift */,
@@ -161,10 +161,10 @@
 			files = (
 				860AFC691F5C250C009B00D5 /* SubstitutionViewController.swift in Sources */,
 				860AFC671F5C24F5009B00D5 /* WhoMadeItViewController.swift in Sources */,
+				86D26D791F6A90F40072FAC6 /* SettingsViewController.swift in Sources */,
 				860AFC541F5C2204009B00D5 /* BBallStatsFromScratch.xcdatamodeld in Sources */,
 				860AFC6B1F5C251C009B00D5 /* BreakViewController.swift in Sources */,
-				860AFC651F5C24DE009B00D5 /* WhatHappendViewController.swift in Sources */,
-				860AFC4E1F5C2204009B00D5 /* SettingsViewController.swift in Sources */,
+				86D26D7B1F6A91DF0072FAC6 /* WhatHappendViewController.swift in Sources */,
 				860AFC4C1F5C2204009B00D5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -327,6 +327,7 @@
 				860AFC5F1F5C2204009B00D5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
