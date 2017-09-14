@@ -19,6 +19,7 @@
 		860AFC6B1F5C251C009B00D5 /* BreakViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860AFC6A1F5C251C009B00D5 /* BreakViewController.swift */; };
 		86D26D791F6A90F40072FAC6 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D26D781F6A90F40072FAC6 /* SettingsViewController.swift */; };
 		86D26D7B1F6A91DF0072FAC6 /* WhatHappendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D26D7A1F6A91DF0072FAC6 /* WhatHappendViewController.swift */; };
+		86FBCB5C1F6B019A003C3007 /* WhoMadeItBothTeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FBCB5B1F6B019A003C3007 /* WhoMadeItBothTeamsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		860AFC6A1F5C251C009B00D5 /* BreakViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreakViewController.swift; sourceTree = "<group>"; };
 		86D26D781F6A90F40072FAC6 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		86D26D7A1F6A91DF0072FAC6 /* WhatHappendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhatHappendViewController.swift; sourceTree = "<group>"; };
+		86FBCB5B1F6B019A003C3007 /* WhoMadeItBothTeamsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhoMadeItBothTeamsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				86D26D781F6A90F40072FAC6 /* SettingsViewController.swift */,
 				86D26D7A1F6A91DF0072FAC6 /* WhatHappendViewController.swift */,
 				860AFC661F5C24F5009B00D5 /* WhoMadeItViewController.swift */,
+				86FBCB5B1F6B019A003C3007 /* WhoMadeItBothTeamsViewController.swift */,
 				860AFC681F5C250C009B00D5 /* SubstitutionViewController.swift */,
 				860AFC6A1F5C251C009B00D5 /* BreakViewController.swift */,
 				860AFC4F1F5C2204009B00D5 /* Main.storyboard */,
@@ -160,6 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				860AFC691F5C250C009B00D5 /* SubstitutionViewController.swift in Sources */,
+				86FBCB5C1F6B019A003C3007 /* WhoMadeItBothTeamsViewController.swift in Sources */,
 				860AFC671F5C24F5009B00D5 /* WhoMadeItViewController.swift in Sources */,
 				86D26D791F6A90F40072FAC6 /* SettingsViewController.swift in Sources */,
 				860AFC541F5C2204009B00D5 /* BBallStatsFromScratch.xcdatamodeld in Sources */,

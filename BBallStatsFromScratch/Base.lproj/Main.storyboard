@@ -511,7 +511,7 @@
         <!--Break View Controller-->
         <scene sceneID="lcE-vH-4kJ">
             <objects>
-                <viewController id="dPT-E9-Rxe" customClass="BreakViewController" customModule="BBallStatsFromScratch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="dPT-E9-Rxe" customClass="BreakViewController" customModule="BBallStatsFromScratch" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jdd-ER-ipd"/>
                         <viewControllerLayoutGuide type="bottom" id="uQp-pe-xxq"/>
@@ -525,6 +525,9 @@
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KV3-Fg-UCc">
                                 <state key="normal" title="Start next Quarter"/>
+                                <connections>
+                                    <action selector="nextQuarterButton:" destination="dPT-E9-Rxe" eventType="touchUpInside" id="ywh-xg-fFY"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quarter Break" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sft-10-jEK">
                                 <constraints>
@@ -543,26 +546,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a44-ks-iV2">
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="nextQuarterButton:" destination="dPT-E9-Rxe" eventType="touchUpInside" id="snH-ps-k6d"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Sft-10-jEK" firstAttribute="centerY" secondItem="KV3-Fg-UCc" secondAttribute="centerY" constant="43" id="3sb-GZ-v3x"/>
+                            <constraint firstItem="Sft-10-jEK" firstAttribute="centerY" secondItem="KV3-Fg-UCc" secondAttribute="centerY" constant="-3" id="3sb-GZ-v3x"/>
                             <constraint firstItem="fEL-ib-62H" firstAttribute="leading" secondItem="gas-01-YXy" secondAttribute="leadingMargin" id="7HS-cv-6oA"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="a44-ks-iV2" secondAttribute="trailing" id="Itw-ck-FwM"/>
-                            <constraint firstItem="RDv-dH-LYy" firstAttribute="top" secondItem="KV3-Fg-UCc" secondAttribute="bottom" constant="15" id="O0P-Mn-RSg"/>
+                            <constraint firstItem="RDv-dH-LYy" firstAttribute="top" secondItem="KV3-Fg-UCc" secondAttribute="bottom" constant="17" id="O0P-Mn-RSg"/>
                             <constraint firstItem="Sft-10-jEK" firstAttribute="centerX" secondItem="gas-01-YXy" secondAttribute="centerX" id="SDa-pS-5cL"/>
-                            <constraint firstItem="RDv-dH-LYy" firstAttribute="leading" secondItem="gas-01-YXy" secondAttribute="leadingMargin" constant="97" id="WCk-JT-ary"/>
-                            <constraint firstItem="a44-ks-iV2" firstAttribute="top" secondItem="KV3-Fg-UCc" secondAttribute="bottom" constant="36" id="WKY-GJ-GVS"/>
+                            <constraint firstItem="RDv-dH-LYy" firstAttribute="leading" secondItem="gas-01-YXy" secondAttribute="leadingMargin" constant="96" id="WCk-JT-ary"/>
                             <constraint firstItem="fEL-ib-62H" firstAttribute="top" secondItem="jdd-ER-ipd" secondAttribute="bottom" constant="79" id="evq-7I-lt3"/>
-                            <constraint firstItem="KV3-Fg-UCc" firstAttribute="top" secondItem="jdd-ER-ipd" secondAttribute="bottom" constant="13" id="fSJ-nU-QCq"/>
-                            <constraint firstAttribute="bottom" secondItem="RDv-dH-LYy" secondAttribute="bottom" id="mpA-4a-X3V"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="RDv-dH-LYy" secondAttribute="trailing" constant="93" id="o7t-oM-9vY"/>
+                            <constraint firstItem="KV3-Fg-UCc" firstAttribute="top" secondItem="jdd-ER-ipd" secondAttribute="bottom" constant="54" id="fSJ-nU-QCq"/>
+                            <constraint firstAttribute="bottom" secondItem="RDv-dH-LYy" secondAttribute="bottom" constant="-306" id="mpA-4a-X3V"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RDv-dH-LYy" secondAttribute="trailing" constant="94" id="o7t-oM-9vY"/>
                             <constraint firstItem="uQp-pe-xxq" firstAttribute="top" secondItem="fEL-ib-62H" secondAttribute="bottom" constant="174" id="uNx-iT-1FQ"/>
                             <constraint firstItem="KV3-Fg-UCc" firstAttribute="trailing" secondItem="gas-01-YXy" secondAttribute="trailingMargin" id="xjD-WV-5mV"/>
                         </constraints>
@@ -572,7 +567,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="QuarterBreakTitleLabel" destination="Sft-10-jEK" id="uhF-px-amo"/>
-                        <outlet property="nextQuarterButtonLabel" destination="a44-ks-iV2" id="Y2P-Yj-qzr"/>
+                        <outlet property="nextQuarterButtonLabel" destination="KV3-Fg-UCc" id="4wP-tf-nay"/>
                         <outlet property="statSummaryTableView" destination="RDv-dH-LYy" id="gXz-ad-dr1"/>
                         <outlet property="summaryLabel" destination="fEL-ib-62H" id="XbJ-v6-NRE"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="breakToGameSegue" id="gwz-x2-LZT"/>
@@ -1335,6 +1330,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="gwz-x2-LZT"/>
-        <segue reference="aPV-kE-8ZV"/>
+        <segue reference="ZcD-N2-Yvd"/>
     </inferredMetricsTieBreakers>
 </document>

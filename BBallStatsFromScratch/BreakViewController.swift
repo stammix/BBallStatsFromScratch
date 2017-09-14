@@ -8,8 +8,7 @@
 
 import UIKit
 
-class BreakViewController: UIViewController //, UITableViewDelegate, UITableViewDataSource 
-{
+class BreakViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var homeTeamScore = 0
     var guestTeamScore = 0
@@ -25,7 +24,11 @@ class BreakViewController: UIViewController //, UITableViewDelegate, UITableView
     @IBOutlet weak var summaryLabel: UILabel!
     
     @IBAction func nextQuarterButton(_ sender: AnyObject) {
-  /*      Period = Period + 1
+     //   Period = Period + 1
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let stat = Stat(context: context)
+        stat.quarter = 2
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
         if Period < 4 {
             performSegue(withIdentifier: "breakToGameSegue", sender: self)
         } else if Period >= 4 && homeTeamScore == guestTeamScore {
@@ -36,13 +39,13 @@ class BreakViewController: UIViewController //, UITableViewDelegate, UITableView
         //  UserDefaults.standard.set("break", forKey: "minute")
         //  UserDefaults.standard.set("break", forKey: "selectedTeam")
         
-   */ }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        statSummaryTableView.dataSource = self
-    //statSummaryTableView.delegate = self
+        statSummaryTableView.dataSource = self
+        statSummaryTableView.delegate = self
         // Do any additional setup after loading the view.
     }
 
@@ -73,7 +76,7 @@ class BreakViewController: UIViewController //, UITableViewDelegate, UITableView
             nextQuarterButtonLabel.setTitle("Save GameStats and upload", for: .normal)
         }
     }
- /*   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return stats.count
        
     }
@@ -82,5 +85,5 @@ class BreakViewController: UIViewController //, UITableViewDelegate, UITableView
         let stat = stats[indexPath.row]
         cell.textLabel?.text = "\(stat.player), \(stat.action), \(stat.pointsOfAction)"
         return cell
-    } */
+    }
 }

@@ -131,6 +131,7 @@ class WhoMadeItViewController: UIViewController {
         if segue.identifier == "WhoMadeItToSubstituionT1Segue" {
             let whoVC = segue.destination as! SubstitutionViewController
             whoVC.subPlayer = player
+            whoVC.chosenTeam = chosenTeam
         }
     }
 }

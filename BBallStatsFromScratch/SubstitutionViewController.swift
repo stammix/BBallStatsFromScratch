@@ -12,6 +12,7 @@ class SubstitutionViewController: UIViewController {
     
     var subPlayer = 1
     var newPlayer = 6
+    var chosenTeam = 1
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -129,9 +129,10 @@ var stats : [Stat] = []
         }
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         let stat = Stat(context: context)
-        let minuteINT = Int16(currentMinute)
-        stat.minute = minuteINT
-        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        stat.minute = Int16(currentMinute)
+        print("current Minute \(stat.minute)")
+     //   currentMinute = Int(stat.minute)
+       // Period = Int(stat.quarter)
         
         lastStatActionLabel.text = stat.action
  
@@ -189,8 +190,13 @@ var stats : [Stat] = []
     }
     override func viewWillAppear(_ animated: Bool) {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        let printed = Stat(context: context)
-        print("*** \(printed)")
+    //    let game = Game(context: context)
+    
+        let stat = Stat(context: context)
+        lastStatActionLabel.text = stat.action
+        Period = Int(stat.quarter)
+        
+        print("***** \(stat)")
   //      getSettings()
         updateLabels()
     }
