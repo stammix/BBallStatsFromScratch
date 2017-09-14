@@ -317,18 +317,18 @@ class WhoMadeItBothTeamsViewController: UIViewController {
             T2Jersey12Button.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyWhite.png"), for: .normal)
         }
     }
- /*           override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             let subVC = segue.destination as! SubstitutionViewController
-            subVC.newPlayer = playerToSwitchIn
-            subVC.homeTeamColor = homeTeamColor
-            subVC.guestTeamColor = guestTeamColor
-            subVC.homeColorPale = homeColorPale
-            subVC.guestColorPale = guestColorPale
-            subVC.tappedAction = Action
-            subVC.chosenTeam = chosenTeam
-            subVC.quarterLength = quarterLength
-            subVC.GameTime = GameTime
-    } */
+//            subVC.newPlayer = playerToSwitchIn
+//            subVC.homeTeamColor = homeTeamColor
+//            subVC.guestTeamColor = guestTeamColor
+//            subVC.homeColorPale = homeColorPale
+//            subVC.guestColorPale = guestColorPale
+//            subVC.tappedAction = Action
+//            subVC.chosenTeam = chosenTeam
+//            subVC.quarterLength = quarterLength
+//            subVC.GameTime = GameTime
+    } 
         //Save Stat to CoreData!!
 }
 

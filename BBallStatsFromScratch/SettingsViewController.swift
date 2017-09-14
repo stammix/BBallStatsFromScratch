@@ -14,8 +14,8 @@ class SettingsViewController: UIViewController {
     var guestTeamColor = UIColor.black
     var homeTeamPale = true
     var guestTeamPale = false
-    var Period = 1
-    var Minute = 1
+    var period = 1
+    var minute = 1
     var homeTeamScore = 0
     var guestTeamScore = 0
     var periodLength = 10
@@ -31,8 +31,8 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func resetGameTapped(_ sender: UIButton) {
-        Period = 1
-        Minute = 1
+        period = 1
+        minute = 1
         homeTeamScore = 0
         guestTeamScore = 0
     }
@@ -42,11 +42,13 @@ class SettingsViewController: UIViewController {
         setting.collectBothTeams = switchState
         setting.quarterLenght = Int16(periodLength)
         let game = Game(context: context)
-        game.homeTeamColor = false
-        game.homeTeamPale = true
-        game.guestTeamColor = true
-        game.guestTeamPale = false
+        game.homeTeamColor = homeTeamColor
+        game.homeTeamPale = homeTeamPale
+        game.guestTeamColor = guestTeamColor
+        game.guestTeamPale = guestTeamPale
         (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        print("*/*/*/* \(setting) ** \(game)")
+ 
         self.performSegue(withIdentifier: "SettingsToGameSegue", sender: self)
     }
     @IBAction func homeTeamBlackColorTapped(_ sender: UIButton) {
@@ -61,6 +63,20 @@ class SettingsViewController: UIViewController {
         homeTeamColor = UIColor.red
         homeTeamPale = false
     }
+    @IBAction func homeTeamWhiteColorTapped(_ sender: UIButton) {
+        homeTeamColor = UIColor.white
+        homeTeamPale = true
+    }
+    @IBAction func homeTeamYellowColorTapped(_ sender: AnyObject) {
+        homeTeamColor = UIColor.yellow
+        homeTeamPale = true
+    }
+    @IBAction func homeTeamGreenColorTapped(_ sender: AnyObject) {
+        homeTeamColor = UIColor.green
+        homeTeamPale = true
+    }
+    
+    
     @IBAction func guestTeamBlackColorTapped(_ sender: UIButton) {
         guestTeamColor = UIColor.black
         guestTeamPale = false
@@ -73,6 +89,21 @@ class SettingsViewController: UIViewController {
         guestTeamColor = UIColor.red
         guestTeamPale = false
     }
+    @IBAction func guestTeamWhiteColorTapped(_ sender: AnyObject) {
+        guestTeamColor = UIColor.white
+        guestTeamPale = true
+    }
+    
+    @IBAction func guestTeamYellowColorTapped(_ sender: AnyObject) {
+        guestTeamColor = UIColor.yellow
+        guestTeamPale = true
+    }
+    @IBAction func guestTeamGreenColorTapped(_ sender: AnyObject) {
+        guestTeamColor = UIColor.green
+        guestTeamPale = true
+    }
+ 
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

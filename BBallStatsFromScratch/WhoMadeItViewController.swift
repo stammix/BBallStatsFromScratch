@@ -125,6 +125,79 @@ class WhoMadeItViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        let game = Game(context: context)
+        print(")*( \(game.homeTeamColor)")
+        jersey1Button.backgroundColor = game.homeTeamColor as! UIColor?
+        jersey2Button.backgroundColor = game.homeTeamColor as! UIColor?
+        jersey3Button.backgroundColor = game.homeTeamColor as! UIColor?
+        jersey4Button.backgroundColor = game.homeTeamColor as! UIColor?
+        jersey5Button.backgroundColor = game.homeTeamColor as! UIColor?
+        jersey6Button.backgroundColor = game.homeTeamColor as! UIColor?
+        jersey7Button.backgroundColor = game.homeTeamColor as! UIColor?
+        jersey8Button.backgroundColor = game.homeTeamColor as! UIColor?
+        jersey9Button.backgroundColor = game.homeTeamColor as! UIColor?
+        jersey10Button.backgroundColor = game.homeTeamColor as! UIColor?
+        jersey11Button.backgroundColor = game.homeTeamColor as! UIColor?
+        jersey12Button.backgroundColor = game.homeTeamColor as! UIColor?
+        
+        if game.homeTeamPale == true {
+            jersey1Button.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyBlack.png"), for: .normal)
+            jersey1Button.setTitleColor(UIColor.black, for: .normal)
+            jersey2Button.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyBlack.png"), for: .normal)
+            jersey2Button.setTitleColor(UIColor.black, for: .normal)
+            jersey3Button.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyBlack.png"), for: .normal)
+            jersey3Button.setTitleColor(UIColor.black, for: .normal)
+            jersey4Button.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyBlack.png"), for: .normal)
+            jersey4Button.setTitleColor(UIColor.black, for: .normal)
+            jersey5Button.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyBlack.png"), for: .normal)
+            jersey5Button.setTitleColor(UIColor.black, for: .normal)
+            jersey6Button.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyBlack.png"), for: .normal)
+            jersey6Button.setTitleColor(UIColor.black, for: .normal)
+            jersey7Button.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyBlack.png"), for: .normal)
+            jersey7Button.setTitleColor(UIColor.black, for: .normal)
+            jersey8Button.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyBlack.png"), for: .normal)
+            jersey8Button.setTitleColor(UIColor.black, for: .normal)
+            jersey9Button.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyBlack.png"), for: .normal)
+            jersey9Button.setTitleColor(UIColor.black, for: .normal)
+            jersey10Button.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyBlack.png"), for: .normal)
+            jersey10Button.setTitleColor(UIColor.black, for: .normal)
+            jersey11Button.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyBlack.png"), for: .normal)
+            jersey11Button.setTitleColor(UIColor.black, for: .normal)
+            jersey12Button.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyBlack.png"), for: .normal)
+            jersey12Button.setTitleColor(UIColor.black, for: .normal)
+        } else if game.homeTeamPale == false {
+            jersey1Button.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyWhite.png"), for: .normal)
+            jersey2Button.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyWhite.png"), for: .normal)
+            jersey3Button.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyWhite.png"), for: .normal)
+            jersey4Button.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyWhite.png"), for: .normal)
+            jersey5Button.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyWhite.png"), for: .normal)
+            jersey6Button.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyWhite.png"), for: .normal)
+            jersey7Button.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyWhite.png"), for: .normal)
+            jersey8Button.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyWhite.png"), for: .normal)
+            jersey9Button.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyWhite.png"), for: .normal)
+            jersey10Button.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyWhite.png"), for: .normal)
+            jersey11Button.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyWhite.png"), for: .normal)
+            jersey12Button.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyWhite.png"), for: .normal)
+        }
+//
+//        jersey1Button.backgroundColor = JerseyColor
+//        jersey2Button.backgroundColor = JerseyColor
+//        jersey3Button.backgroundColor = JerseyColor
+//        jersey4Button.backgroundColor = JerseyColor
+//        jersey5Button.backgroundColor = JerseyColor
+//        jersey6Button.backgroundColor = JerseyColor
+//        jersey7Button.backgroundColor = JerseyColor
+//        jersey8Button.backgroundColor = JerseyColor
+//        jersey9Button.backgroundColor = JerseyColor
+//        jersey10Button.backgroundColor = JerseyColor
+//        jersey11Button.backgroundColor = JerseyColor
+//        jersey12Button.backgroundColor = JerseyColor
+//        
+//        print ("HomeTeamColor is \(homeTeamColor)")
+//        print ("TappedAction is \(tappedAction)")
+//        print("There was a \(tappedAction) in the \(actualMinute). Minute")
+//    }
+        
         
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
