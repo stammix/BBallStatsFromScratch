@@ -20,7 +20,6 @@ class SettingsViewController: UIViewController {
     var guestTeamScore = 0
     var periodLength = 10
     var switchState = false
-    
     @IBAction func teamSwitch(_ sender: UISwitch) {
         if switchState == false {
             switchState = true
@@ -29,7 +28,6 @@ class SettingsViewController: UIViewController {
             switchState = false
         }
     }
-    
     @IBAction func resetGameTapped(_ sender: UIButton) {
         period = 1
         minute = 1
@@ -48,7 +46,6 @@ class SettingsViewController: UIViewController {
         game.guestTeamPale = guestTeamPale
         (UIApplication.shared.delegate as! AppDelegate).saveContext()
         print("*/*/*/* \(setting) ** \(game)")
- 
         self.performSegue(withIdentifier: "SettingsToGameSegue", sender: self)
     }
     @IBAction func homeTeamBlackColorTapped(_ sender: UIButton) {

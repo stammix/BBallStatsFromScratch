@@ -127,8 +127,8 @@ class WhoMadeItViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         let game = Game(context: context)
         print(")*( \(game.homeTeamColor)")
-        jersey1Button.backgroundColor = game.homeTeamColor as! UIColor?
-        jersey2Button.backgroundColor = game.homeTeamColor as! UIColor?
+        jersey1Button.backgroundColor = game.homeTeamColor as! UIColor!
+        jersey2Button.backgroundColor = game.homeTeamColor as! UIColor!
         jersey3Button.backgroundColor = game.homeTeamColor as! UIColor?
         jersey4Button.backgroundColor = game.homeTeamColor as! UIColor?
         jersey5Button.backgroundColor = game.homeTeamColor as! UIColor?
