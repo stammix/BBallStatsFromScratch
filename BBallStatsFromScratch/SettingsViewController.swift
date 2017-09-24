@@ -20,6 +20,9 @@ class SettingsViewController: UIViewController {
     var guestTeamScore = 0
     var periodLength = 10
     var switchState = false
+    
+    
+    @IBOutlet weak var collectBothSwitch: UISwitch!
     @IBAction func teamSwitch(_ sender: UISwitch) {
         if switchState == false {
             switchState = true
@@ -105,5 +108,9 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        if switchState == true {
+            collectBothSwitch.setOn(true, animated: true)
+        }
+    }
 }

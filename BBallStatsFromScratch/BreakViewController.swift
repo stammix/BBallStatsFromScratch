@@ -24,14 +24,14 @@ class BreakViewController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBOutlet weak var summaryLabel: UILabel!
     
     @IBAction func nextQuarterButton(_ sender: AnyObject) {
-     //   Period = Period + 1
+     //   period = period + 1
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         let stat = Stat(context: context)
         stat.quarter = 2
         (UIApplication.shared.delegate as! AppDelegate).saveContext()
-        if Period < 4 {
+        if period < 4 {
             performSegue(withIdentifier: "breakToGameSegue", sender: self)
-        } else if Period >= 4 && homeTeamScore == guestTeamScore {
+        } else if period >= 4 && homeTeamScore == guestTeamScore {
             performSegue(withIdentifier: "breakToGameSegue", sender: self)
         } else {
             performSegue(withIdentifier: "breakToGameSegue", sender: self)
@@ -51,26 +51,26 @@ class BreakViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
     override func viewWillAppear(_ animated: Bool) {
         if period == 1 {
-            print("*** Break after Period 1")
+            print("*** Break after period 1")
             summaryLabel.text = "Summary Quarter 1"
         } else if period == 2 {
-            print("*** Break after Period 2")
+            print("*** Break after period 2")
             summaryLabel.text = "Summary Quarter 2"
-        } else if Period == 3 {
-            print("*** Break after Period 3")
+        } else if period == 3 {
+            print("*** Break after period 3")
             summaryLabel.text = "Summary Quarter 3"
         } else if period == 4 && homeTeamScore == guestTeamScore{
-            print("*** Break after Period 4")
+            print("*** Break after period 4")
             summaryLabel.text = "Summary Quarter 4"
             QuarterBreakTitleLabel.text = "Game Summary"
             nextQuarterButtonLabel.setTitle("Overtime Baby", for: .normal)
         } else if period > 4 && homeTeamScore == guestTeamScore{
-            print("*** Break after OT \(Period - 4)")
-            summaryLabel.text = "Summary OT \(Period - 4)"
+            print("*** Break after OT \(period - 4)")
+            summaryLabel.text = "Summary OT \(period - 4)"
             QuarterBreakTitleLabel.text = "OT Summary"
             nextQuarterButtonLabel.setTitle("Overtime Baby", for: .normal)
         } else if period >= 4 {
-            print("*** Break after Period 4")
+            print("*** Break after period 4")
             summaryLabel.text = "Summary Quarter 4"
             QuarterBreakTitleLabel.text = "Game Summary"
             nextQuarterButtonLabel.setTitle("Save GameStats and upload", for: .normal)

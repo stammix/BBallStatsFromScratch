@@ -9,24 +9,25 @@
 import UIKit
 var collectStatsForBothTeams = false
 
-var tappedAction = "2pointer"
-var pointsOfAction = 0
-var segueToWhoMade = "whatHappendToWhoMadeItSegue"
-var Period = 1
-var currentMinute = 1
-var currentMinuteMinusTwo = -1
-var currentMinuteMinusOne = 0
-var currentMinutePlusOne = 2
-var currentMinutePlusTwo = 3
-var GameTime = 10
-var helpVar = GameTime - 1
-var currentScoreTeamOne = 0
-var currentScoreTeamTwo = 0
+
+
 
 class WhatHappendViewController: UIViewController {
 var collectStatsForBothTeams = false
 var homeTeamColor = UIColor.white
 var guestTeamColor = UIColor.black
+    var currentScoreTeamTwo = 0
+    var tappedAction = "2pointer"
+    var pointsOfAction = 0
+    var segueToWhoMade = "whatHappendToWhoMadeItSegue"
+    var Period = 1
+    var currentMinute = 1
+    var currentMinuteMinusTwo = -1
+    var currentMinuteMinusOne = 0
+    var currentMinutePlusOne = 2
+    var currentMinutePlusTwo = 3
+    var GameTime = 10
+    var currentScoreTeamOne = 0
 
 var settings : [Settings] = []
 var stats : [Stat] = []
@@ -104,6 +105,7 @@ var stats : [Stat] = []
         updateLabels()
     }
     func updateLabels(){
+        let helpVar = GameTime - 1
         self.CurrentMinuteLabel.text = "\(currentMinute)"
         if currentMinuteMinusTwo >= (GameTime-helpVar) {
             self.twoMinutesBackLabel.text = "\(currentMinuteMinusTwo)"
@@ -139,6 +141,12 @@ var stats : [Stat] = []
  }
     override func viewDidLoad() {
         super.viewDidLoad()
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let settings = Settings(context: context)
+        print(settings)
+        if settings.collectBothTeams == true {
+        segueToWhoMade = "whatHappendToWhoMadeBothTeamsSegue"
+        }
         // Do any additional setup after loading the view.
     }
     @IBAction func backToSettingsButton(_ sender: AnyObject) {
